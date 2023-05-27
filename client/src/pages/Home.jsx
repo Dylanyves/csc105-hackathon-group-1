@@ -19,7 +19,7 @@ function Home(props) {
             <Sky />
             <Ocean />
         </div>
-    );
+  );
 }
 
 export default Home;
