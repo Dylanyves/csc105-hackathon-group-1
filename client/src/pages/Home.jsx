@@ -16,6 +16,11 @@ function Home(props) {
             </div>
             <Hero />
             <Neptune />
+            <div className="">
+                <div id="stars"></div>
+                <div id="stars2"></div>
+                <div id="stars3"></div>
+            </div>
             <Sky />
             <Ocean />
         </div>
