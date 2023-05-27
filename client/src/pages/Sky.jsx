@@ -42,25 +42,25 @@ function Sky(props) {
 
             {/* Gallery */}
             <div className="mt-48 max-w-4xl m-auto">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 items-center justify-center">
                     <div class="grid gap-4">
                         <div>
                             <img
-                                class="h-auto max-w-full rounded-lg"
+                                class="h-auto max-w-full rounded-lg m-auto"
                                 src={Sky1}
                                 alt=""
                             />
                         </div>
                         <div>
                             <img
-                                class="h-auto max-w-full rounded-lg"
+                                class="h-auto max-w-full rounded-lg m-auto"
                                 src={Sky2}
                                 alt=""
                             />
                         </div>
                         <div>
                             <img
-                                class="h-auto max-w-full rounded-lg"
+                                class="h-auto max-w-full rounded-lg m-auto"
                                 src={Sky3}
                                 alt=""
                             />
@@ -69,21 +69,21 @@ function Sky(props) {
                     <div class="grid gap-4">
                         <div>
                             <img
-                                class="h-auto max-w-full rounded-lg"
+                                class="h-auto max-w-full rounded-lg m-auto"
                                 src={Sky4}
                                 alt=""
                             />
                         </div>
                         <div>
                             <img
-                                class="h-auto max-w-full rounded-lg"
+                                class="h-auto max-w-full rounded-lg m-auto"
                                 src={Sky5}
                                 alt=""
                             />
                         </div>
                         <div>
                             <img
-                                class="h-auto max-w-full rounded-lg"
+                                class="h-auto max-w-full rounded-lg m-auto"
                                 src={Sky6}
                                 alt=""
                             />
@@ -92,21 +92,21 @@ function Sky(props) {
                     <div class="grid gap-4">
                         <div>
                             <img
-                                class="h-auto max-w-full rounded-lg"
+                                class="h-auto max-w-full rounded-lg m-auto"
                                 src={Sky7}
                                 alt=""
                             />
                         </div>
                         <div>
                             <img
-                                class="h-auto max-w-full rounded-lg"
+                                class="h-auto max-w-full rounded-lg m-auto"
                                 src={Sky8}
                                 alt=""
                             />
                         </div>
                         <div>
                             <img
-                                class="h-auto max-w-full rounded-lg"
+                                class="h-auto max-w-full rounded-lg m-auto"
                                 src={Sky9}
                                 alt=""
                             />
@@ -115,21 +115,21 @@ function Sky(props) {
                     <div class="grid gap-4">
                         <div>
                             <img
-                                class="h-auto max-w-full rounded-lg"
+                                class="h-auto max-w-full rounded-lg m-auto"
                                 src={Sky10}
                                 alt=""
                             />
                         </div>
                         <div>
                             <img
-                                class="h-auto max-w-full rounded-lg"
+                                class="h-auto max-w-full rounded-lg m-auto"
                                 src={Sky11}
                                 alt=""
                             />
                         </div>
                         <div>
                             <img
-                                class="h-auto max-w-full rounded-lg"
+                                class="h-auto max-w-full rounded-lg m-auto"
                                 src={Sky12}
                                 alt=""
                             />
@@ -140,16 +140,21 @@ function Sky(props) {
 
             {/* Accordion */}
             <div className="max-w-2xl m-auto mt-32">
+                <h3 className="text-white mb-8 text-2xl">
+                    Something you might not know
+                </h3>
                 <div id="accordion-collapse" data-accordion="collapse">
                     <h2 id="accordion-collapse-heading-1">
                         <button
                             type="button"
-                            class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+                            class="bg-white text-white bg-opacity-20 flex items-center justify-between w-full p-5 font-medium text-left order border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-graay-400 dark:hover:bg-gray-800"
                             data-accordion-target="#accordion-collapse-body-1"
                             aria-expanded="true"
                             aria-controls="accordion-collapse-body-1"
                         >
-                            <span>What is Flowbite?</span>
+                            <span className="text-gray-200">
+                                What is Flowbite?
+                            </span>
                             <svg
                                 data-accordion-icon
                                 class="w-6 h-6 rotate-180 shrink-0"
@@ -171,34 +176,27 @@ function Sky(props) {
                         aria-labelledby="accordion-collapse-heading-1"
                     >
                         <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                            <p class="mb-2 text-gray-500 dark:text-gray-400">
-                                Flowbite is an open-source library of
-                                interactive components built on top of Tailwind
-                                CSS including buttons, dropdowns, modals,
-                                navbars, and more.
-                            </p>
-                            <p class="text-gray-500 dark:text-gray-400">
-                                Check out this guide to learn how to{" "}
-                                <a
-                                    href="/docs/getting-started/introduction/"
-                                    class="text-blue-600 dark:text-blue-500 hover:underline"
-                                >
-                                    get started
-                                </a>{" "}
-                                and start developing websites even faster with
-                                components on top of Tailwind CSS.
+                            <p class="mb-2 text-white dark:text-gray-400">
+                                The sky appears blue during the day due to a
+                                phenomenon called Rayleigh scattering, where
+                                molecules in the Earth's atmosphere scatter
+                                shorter-wavelength light, like blue and violet,
+                                more than longer-wavelength light, like red and
+                                orange.
                             </p>
                         </div>
                     </div>
                     <h2 id="accordion-collapse-heading-2">
                         <button
                             type="button"
-                            class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+                            class="bg-white bg-opacity-20 flex items-center justify-between w-full p-5 font-medium text-left text-white order border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:tebg-gray-100 dark:hover:bg-gray-800"
                             data-accordion-target="#accordion-collapse-body-2"
                             aria-expanded="false"
                             aria-controls="accordion-collapse-body-2"
                         >
-                            <span>Is there a Figma file available?</span>
+                            <span className="text-gray-200">
+                                Is there a Figma file available?
+                            </span>
                             <svg
                                 data-accordion-icon
                                 class="w-6 h-6 shrink-0"
@@ -220,34 +218,25 @@ function Sky(props) {
                         aria-labelledby="accordion-collapse-heading-2"
                     >
                         <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                            <p class="mb-2 text-gray-500 dark:text-gray-400">
-                                Flowbite is first conceptualized and designed
-                                using the Figma software so everything you see
-                                in the library has a design equivalent in our
-                                Figma file.
-                            </p>
-                            <p class="text-gray-500 dark:text-gray-400">
-                                Check out the{" "}
-                                <a
-                                    href="https://flowbite.com/figma/"
-                                    class="text-blue-600 dark:text-blue-500 hover:underline"
-                                >
-                                    Figma design system
-                                </a>{" "}
-                                based on the utility classes from Tailwind CSS
-                                and components from Flowbite.
+                            <p class="mb-2 text-white dark:text-gray-400">
+                                The highest clouds in the Earth's atmosphere,
+                                called noctilucent clouds, form at extremely
+                                high altitudes near the poles during the summer
+                                months. They are so high that they can still
+                                catch sunlight even after the sun has set,
+                                creating a mesmerizing glowing effect.
                             </p>
                         </div>
                     </div>
                     <h2 id="accordion-collapse-heading-3">
                         <button
                             type="button"
-                            class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+                            class="bg-white bg-opacity-20 flex items-center justify-between w-full p-5 font-medium text-left text-white order border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-800"
                             data-accordion-target="#accordion-collapse-body-3"
                             aria-expanded="false"
                             aria-controls="accordion-collapse-body-3"
                         >
-                            <span>
+                            <span className="text-gray-200">
                                 What are the differences between Flowbite and
                                 Tailwind UI?
                             </span>
@@ -272,42 +261,18 @@ function Sky(props) {
                         aria-labelledby="accordion-collapse-heading-3"
                     >
                         <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
-                            <p class="mb-2 text-gray-500 dark:text-gray-400">
-                                The main difference is that the core components
-                                from Flowbite are open source under the MIT
-                                license, whereas Tailwind UI is a paid product.
-                                Another difference is that Flowbite relies on
-                                smaller and standalone components, whereas
-                                Tailwind UI offers sections of pages.
+                            <p class="mb-2 text-white dark:text-gray-400">
+                                The sky is not completely dark even at night.
+                                Even in the absence of the Moon and light
+                                pollution, the night sky still exhibits a faint
+                                glow known as "airglow." Airglow is caused by
+                                various chemical reactions and emissions in the
+                                upper atmosphere.
                             </p>
-                            <p class="mb-2 text-gray-500 dark:text-gray-400">
-                                However, we actually recommend using both
-                                Flowbite, Flowbite Pro, and even Tailwind UI as
-                                there is no technical reason stopping you from
-                                using the best of two worlds.
-                            </p>
-                            <p class="mb-2 text-gray-500 dark:text-gray-400">
+
+                            <p class="mb-2 text-white dark:text-gray-400">
                                 Learn more about these technologies:
                             </p>
-                            <ul class="pl-5 text-gray-500 list-disc dark:text-gray-400">
-                                <li>
-                                    <a
-                                        href="https://flowbite.com/pro/"
-                                        class="text-blue-600 dark:text-blue-500 hover:underline"
-                                    >
-                                        Flowbite Pro
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="https://tailwindui.com/"
-                                        rel="nofollow"
-                                        class="text-blue-600 dark:text-blue-500 hover:underline"
-                                    >
-                                        Tailwind UI
-                                    </a>
-                                </li>
-                            </ul>
                         </div>
                     </div>
                 </div>
