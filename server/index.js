@@ -35,6 +35,7 @@ app.post("/signup", require("./routes/endpoint_signup"));
 app.post("/login", require("./routes/endpoint_login"));
 app.delete("/delete", require("./routes/endpoint_delete"));
 app.patch("/update", require("./routes/endpoint_update"));
+app.post("/download", require("./routes/endpoint_cloudConnector"));
 app.listen(port, () => {
   console.log("App is running at port " + port);
 });
