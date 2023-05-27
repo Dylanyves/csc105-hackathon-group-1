@@ -17,12 +17,7 @@ import Sky12 from "../assets/images/skies/k12.jpg";
 
 function Sky(props) {
     return (
-        <div className="px-8 mt-72">
-            <div>
-                <div id="stars"></div>
-                <div id="stars2"></div>
-                <div id="stars3"></div>
-            </div>
+        <div className="px-8 mt-80">
             <div data-aos="zoom-in" data-aos-duration="1000" className="">
                 <div className="relative">
                     <h2 className="text-white absolute -top-4 left-1/2 -translate-x-1/2 font-semibold text-6xl sm:text-[6rem]  ease duration-200">
@@ -153,7 +148,7 @@ function Sky(props) {
                             aria-controls="accordion-collapse-body-1"
                         >
                             <span className="text-gray-200">
-                                What is Flowbite?
+                                What is Rayleigh scattering?
                             </span>
                             <svg
                                 data-accordion-icon
@@ -195,7 +190,7 @@ function Sky(props) {
                             aria-controls="accordion-collapse-body-2"
                         >
                             <span className="text-gray-200">
-                                Is there a Figma file available?
+                                What are noctilucent clouds?
                             </span>
                             <svg
                                 data-accordion-icon
@@ -237,8 +232,7 @@ function Sky(props) {
                             aria-controls="accordion-collapse-body-3"
                         >
                             <span className="text-gray-200">
-                                What are the differences between Flowbite and
-                                Tailwind UI?
+                                What is an Airglow?
                             </span>
                             <svg
                                 data-accordion-icon
@@ -276,6 +270,16 @@ function Sky(props) {
                         </div>
                     </div>
                 </div>
+            </div>
+
+            {/* Button */}
+            <div className="max-w-2xl m-auto mt-24 flex justify-center flex-col items-center">
+                <p className="text-white font-light text-center">
+                    Link to download skylight difference dataset
+                </p>
+                <button className="mt-6 text-white border-[1.5px] block px-8 py-3 text-sm md:text-base rounded-full hover:bg-gray-100 hover:text-black ease duration-200">
+                    Download data
+                </button>
             </div>
         </div>
     );

@@ -4,7 +4,7 @@ import NeptuneImage from "../assets/images/neptune.png";
 
 function Neptune(props) {
     return (
-        <div className="px-8">
+        <div id="neptune" className="px-8 py-20">
             <div>
                 <div
                     data-aos="zoom-in"
@@ -14,9 +14,9 @@ function Neptune(props) {
                     <div className="min-h-screen">
                         <div className="flex items-center flex-col relative">
                             <img src={NeptuneImage} alt="" />
-                            <h1 className="text-white font-semibold text-6xl sm:text-[6rem] absolute top-[40%] left-[50%] translate-x-[-50%] ease duration-200">
+                            <h2 className="text-white font-semibold text-6xl sm:text-[6rem] absolute top-[40%] left-[50%] translate-x-[-50%] ease duration-200">
                                 NEPTUNE
-                            </h1>
+                            </h2>
                         </div>
                         <p className="text-white max-w-2xl lg:text-lg text-center m-auto mt-10 font-light">
                             <span className="font-semibold text-[#DBCC49] mr-1">
@@ -97,8 +97,7 @@ function Neptune(props) {
                                 <div class="p-5">
                                     <a href="#">
                                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">
-                                            Noteworthy technology acquisitions
-                                            2021
+                                            Magnetic fields and auroras
                                         </h5>
                                     </a>
                                     <p class="mb-3 font-normal text-white dark:text-gray-400">
