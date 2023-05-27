@@ -11,7 +11,13 @@ function Login(props) {
         e.preventDefault();
         const usernameValue = username.current.value;
         const passwordValue = password.current.value;
-        console.log(remember);
+
+        // If remember me set cache
+        if (remember) {
+            console.log("remember");
+        } else {
+            console.log("not remember");
+        }
     };
 
     return (
