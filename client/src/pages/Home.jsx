@@ -17,8 +17,10 @@ function Home(props) {
             <Hero />
             <Neptune />
             <Sky />
-        </div>
-    );
+
+
+    </div>
+  );
 }
 
 export default Home;
