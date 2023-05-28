@@ -1,1 +1,2 @@
-# csc105-hackathon-group-1
+#Something about ~~blue~~
+## csc105-hackathon-group-1
