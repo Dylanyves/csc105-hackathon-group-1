@@ -22,12 +22,6 @@ function App() {
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<Home />}></Route>
-                    <Route path="/login" element={<Login />}></Route>
-                    <Route path="/signup" element={<Signup />}></Route>
-                    <Route path="/neptune" element={<Neptune />}></Route>
-                    <Route path="/ocean" element={<Ocean />}></Route>
-                    <Route path="/sky" element={<Sky />}></Route>
-
                     <Route path="/*" element={<NotFound />} />
                 </Routes>
             </BrowserRouter>
