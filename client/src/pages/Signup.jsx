@@ -13,17 +13,25 @@ function Signup({ setLogin, setSignup }) {
         const passwordValue = password.current.value;
         const confirmPasswordValue = confirmPassword.current.value;
 
-        console.log(passwordValue, confirmPasswordValue);
-
         if (passwordValue !== confirmPasswordValue) {
             Swal.fire("Password doesn't match");
         } else {
-            console.log(usernameValue);
             Axios.post("/signup", {
                 username: usernameValue,
                 password: passwordValue,
             }).then((res) => {
-                console.log(res);
+                if (res.data.success) {
+                    Swal.fire("Success");
+                    closeForm();
+                    localStorage.setItem(
+                        "user",
+                        JSON.stringify({
+                            username: usernameValue,
+                        })
+                    );
+                } else {
+                    Swal.fire(res.data.message);
+                }
             });
         }
     };
@@ -33,9 +41,20 @@ function Signup({ setLogin, setSignup }) {
         setSignup(false);
     };
 
+    const closeForm = () => {
+        setLogin(false);
+        setSignup(false);
+    };
+
     return (
         <div className="h-screen flex items-center justify-center">
-            <div className="p-8 bg-gray-100 w-[400px]  rounded-2xl">
+            <div className="relative py-10 px-8 bg-gray-100 w-[400px]  rounded-2xl">
+                <button
+                    className="absolute top-4 right-4 text-black"
+                    onClick={closeForm}
+                >
+                    <i className="fa-solid fa-xmark text-2xl"></i>
+                </button>
                 <h1 className="text-center text-xl mb-10 text-black">Signup</h1>
                 <form onSubmit={submitHandle} className="mb-10">
                     <div className="mb-6">

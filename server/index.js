@@ -20,7 +20,7 @@ global.connection = connection;
 
 // Create express app
 const app = express();
-const port = 5000;
+const port = 6901;
 
 var corsOptions = {
   origin: ["http://localhost:3000"],
@@ -32,6 +32,7 @@ app.use(bodyParser.json({ type: "application/json" }));
 
 // Routes
 app.get("/me", require("./routes/endpoint_me"));
+app.post("/getUserId", require("./routes/endpoint_getUserId"));
 app.post("/signup", require("./routes/endpoint_signup"));
 app.post("/login", require("./routes/endpoint_login"));
 app.delete("/delete", require("./routes/endpoint_delete"));

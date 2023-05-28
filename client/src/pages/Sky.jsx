@@ -1,6 +1,7 @@
 import React from "react";
 
 import Cloud from "../assets/images/cloud.png";
+import Axios from "../share/axios";
 
 import Sky1 from "../assets/images/skies/k1.jpg";
 import Sky2 from "../assets/images/skies/k2.jpg";
@@ -15,7 +16,26 @@ import Sky10 from "../assets/images/skies/k10.jpg";
 import Sky11 from "../assets/images/skies/k11.jpg";
 import Sky12 from "../assets/images/skies/k12.jpg";
 
+import { useNavigate } from "react-router";
+
+import Swal from "sweetalert2";
+
 function Sky(props) {
+    const navigate = useNavigate();
+    const downloadData = () => {
+        Axios.get("/me", { withCredentials: true }).then((res) => {
+            if (res.data.success) {
+                Axios.post("/download", {
+                    fileName: "ocean_temp.csv",
+                }).then((res) => {
+                    Swal.fire("Download successful");
+                    window.open(res.data.url, "_blank", "noreferrer");
+                });
+            } else {
+                Swal.fire("You must login first");
+            }
+        });
+    };
     return (
         <div className="px-8 mt-80">
             <div data-aos="zoom-in" data-aos-duration="1000" className="">
@@ -285,7 +305,10 @@ function Sky(props) {
                 <p className="text-white font-light text-center">
                     Link to download skylight difference dataset
                 </p>
-                <button className="mt-6 text-white border-[1.5px] block px-8 py-3 text-sm md:text-base rounded-full hover:bg-gray-100 hover:text-black ease duration-200">
+                <button
+                    onClick={downloadData}
+                    className="mt-6 text-white border-[1.5px] block px-8 py-3 text-sm md:text-base rounded-full hover:bg-gray-100 hover:text-black ease duration-200"
+                >
                     Download data
                 </button>
             </div>

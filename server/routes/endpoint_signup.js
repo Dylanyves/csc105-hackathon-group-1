@@ -60,7 +60,6 @@ module.exports = async (req, res) => {
                                         success: true,
                                         message:
                                             "Register credential is correct",
-                                        data: result1[0],
                                     });
                                 }
                             }
@@ -72,7 +71,6 @@ module.exports = async (req, res) => {
                     success: false,
                     message: "Username is already used",
                 });
-                console.log("Username is already used");
             }
         }
     });
