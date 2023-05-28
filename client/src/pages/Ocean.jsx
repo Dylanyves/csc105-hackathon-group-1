@@ -6,8 +6,26 @@ import Penguin from "../assets/images/ocean/penguin.png";
 import Sealion from "../assets/images/ocean/sealion.png";
 import Manatee from "../assets/images/ocean/manachi.png";
 import Turtle from "../assets/images/ocean/turtle.png";
+import Swal from "sweetalert2";
+
+import Axios from "../share/axios";
 
 function Ocean(props) {
+    const downloadData = () => {
+        Axios.get("/me", { withCredentials: true }).then((res) => {
+            if (res.data.success) {
+                Axios.post("/download", {
+                    fileName: "ocean_temp.csv",
+                }).then((res) => {
+                    Swal.fire("Download successful");
+                    window.open(res.data.url, "_blank", "noreferrer");
+                });
+            } else {
+                Swal.fire("You must login first");
+            }
+        });
+    };
+
     return (
         <div className="mt-80 relative">
             <div data-aos="flip-right" data-aos-duration="1000" className="">
@@ -16,19 +34,19 @@ function Ocean(props) {
                 </h2>
             </div>
             <ul className="max-w-3xl m-auto text-white flex flex-wrap items-center justify-center gap-14 text-center px-8">
-                <li>
+                <li data-aos="zoom-out-right" data-aos-duration="1000">
                     <p className="text-3xl text-[#DBCC49] sm:text-4xl xl:text-5xl font-semibold">
                         230,000
                     </p>
                     <p className="text-sm mt-1">Known species</p>
                 </li>
-                <li>
+                <li data-aos="zoom-out-up" data-aos-duration="1000">
                     <p className="text-3xl text-[#DBCC49] sm:text-4xl xl:text-5xl font-semibold">
                         250,000 <span className="text-xs font-light">tons</span>
                     </p>
                     <p className="text-sm mt-1">Plastics in the ocean</p>
                 </li>
-                <li>
+                <li data-aos="zoom-out-left" data-aos-duration="1000">
                     <p className="text-3xl text-[#DBCC49] sm:text-4xl xl:text-5xl font-semibold">
                         3800 <span className="text-xs font-light">m</span>
                     </p>
@@ -52,7 +70,7 @@ function Ocean(props) {
                             data-carousel-item
                         >
                             <img
-                                src={Turtle}
+                                src={Shark}
                                 className="absolute block w-[40%] -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                                 alt="..."
                             />
@@ -62,8 +80,8 @@ function Ocean(props) {
                             data-carousel-item
                         >
                             <img
-                                src={Shark}
-                                className="absolute block w-[40%] -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                src={Manatee}
+                                className="absolute block w-[45%] -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                                 alt="..."
                             />
                         </div>
@@ -72,8 +90,8 @@ function Ocean(props) {
                             data-carousel-item="active"
                         >
                             <img
-                                src={Manatee}
-                                className="absolute block w-[45%] -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                src={Turtle}
+                                className="absolute block w-[40%] -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                                 alt="..."
                             />
                         </div>
@@ -193,12 +211,15 @@ function Ocean(props) {
                 <p className="text-white font-light text-center">
                     Ocean oil spill dataset
                 </p>
-                <button className="z-10 cursor-pointer mt-6 text-white border-[1.5px] block px-8 py-3 text-sm md:text-base rounded-full hover:bg-gray-100 hover:text-black ease duration-200">
+                <button
+                    onClick={downloadData}
+                    className="z-10 cursor-pointer mt-6 text-white border-[1.5px] block px-8 py-3 text-sm md:text-base rounded-full hover:bg-gray-100 hover:text-black ease duration-200"
+                >
                     Download data
                 </button>
             </div>
 
-            <div className="min-h-screen">
+            <div className="min-h-[75vh]">
                 <div>
                     <img
                         className="absolute bottom-0 left-0 w-full"

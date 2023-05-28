@@ -1,22 +1,41 @@
 import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
+import Axios from "../share/axios";
 
-function Login({ login, setLogin, signup, setSignup }) {
+import Swal from "sweetalert2";
+
+function Login({ login, setLogin, signup, setSignup, setIsLoggedIn }) {
     const username = useRef();
     const password = useRef();
-    const [remember, setRemember] = useState(false);
 
     const submitHandle = (e) => {
         e.preventDefault();
         const usernameValue = username.current.value;
         const passwordValue = password.current.value;
 
-        // If remember me set cache
-        if (remember) {
-            console.log("remember");
-        } else {
-            console.log("not remember");
-        }
+        Axios.post(
+            "/login",
+            {
+                username: usernameValue,
+                password: passwordValue,
+            },
+            { withCredentials: true }
+        ).then((res) => {
+            if (res.data.success) {
+                setIsLoggedIn(true);
+                Swal.fire("Success");
+                closeForm();
+
+                localStorage.setItem(
+                    "user",
+                    JSON.stringify({
+                        username: usernameValue,
+                    })
+                );
+            } else {
+                Swal.fire(res.data.message);
+            }
+        });
     };
 
     const toggle = () => {
@@ -24,10 +43,21 @@ function Login({ login, setLogin, signup, setSignup }) {
         setSignup(true);
     };
 
+    const closeForm = () => {
+        setLogin(false);
+        setSignup(false);
+    };
+
     return (
         <div className="">
             <div className="h-screen flex items-center justify-center">
-                <div className="p-8 bg-gray-100 w-[400px]  rounded-2xl">
+                <div className="relative px-8 py-10 bg-gray-100 w-[400px]  rounded-2xl">
+                    <button
+                        className="absolute top-4 right-4 text-black"
+                        onClick={closeForm}
+                    >
+                        <i className="fa-solid fa-xmark text-2xl"></i>
+                    </button>
                     <h1 className="text-center text-xl mb-10 text-black">
                         Login
                     </h1>

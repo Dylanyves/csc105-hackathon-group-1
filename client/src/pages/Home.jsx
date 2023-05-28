@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import LoginButton from "../components/LoginButton";
-import SigninButton from "../components/SigninButton";
+import LogoutButton from "../components/LogoutButton";
+import Supernova from "../components/Supernova";
 import Login from "./Login";
 import Signup from "./Signup";
 
@@ -17,16 +18,21 @@ function Home(props) {
     const [signup, setSignup] = useState(false);
 
     useEffect(() => {
-        Axios.get("/me").then((res) => {
+        Axios.get("/me", { withCredentials: true }).then((res) => {
             if (res.data.success) {
                 setIsLoggedIn(true);
             }
         });
     }, []);
 
-    // useEffect(() => {
-    //     console.log(hidden);
-    // }, [hidden]);
+    const loggedInComponent = () => {
+        return (
+            <div className="flex gap-x-4">
+                <Supernova setIsLoggedIn={setIsLoggedIn} />
+                <LogoutButton setIsLoggedIn={setIsLoggedIn} />
+            </div>
+        );
+    };
 
     return (
         <div className="relative bg-gradient-to-b from-black via-[#002bAE] to-black">
@@ -44,7 +50,9 @@ function Home(props) {
                         setSignup={setSignup}
                         signup={signup}
                     />
-                ) : null}
+                ) : (
+                    loggedInComponent()
+                )}
             </div>
             {login ? (
                 <Login
@@ -52,6 +60,7 @@ function Home(props) {
                     login={login}
                     setSignup={setSignup}
                     signup={signup}
+                    setIsLoggedIn={setIsLoggedIn}
                 />
             ) : null}
             {signup ? (
@@ -60,6 +69,7 @@ function Home(props) {
                     login={login}
                     setSignup={setSignup}
                     signup={signup}
+                    setIsLoggedIn={setIsLoggedIn}
                 />
             ) : null}
 
