@@ -86,8 +86,11 @@ function Neptune(props) {
                             data-aos-duration="1500"
                             className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 xl:gap-y-0 md:gap-x-10 gap-y-10 justify-between items-center"
                         >
-                            <div className="bg-opacity-20 hover:bg-opacity-40 ease duration-200 max-w-sm bg-white  border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-auto">
-                                <a href="#">
+                            <div className="bg-opacity-20 h-full hover:bg-opacity-40 ease duration-200 max-w-sm bg-white  border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-auto">
+                                <a
+                                    target="_blank"
+                                    href="https://www.britannica.com/place/Neptune-planet/The-magnetic-field-and-magnetosphere"
+                                >
                                     <img
                                         className="rounded-t-lg"
                                         src="https://img.freepik.com/free-photo/nature-night-sky-stars-galaxy-aurora-generative-ai_188544-12466.jpg?w=2000"
@@ -95,7 +98,10 @@ function Neptune(props) {
                                     />
                                 </a>
                                 <div className="p-5">
-                                    <a href="#">
+                                    <a
+                                        target="_blank"
+                                        href="https://www.britannica.com/place/Neptune-planet/The-magnetic-field-and-magnetosphere"
+                                    >
                                         <h5 className="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">
                                             Magnetic fields and auroras
                                         </h5>
@@ -107,8 +113,11 @@ function Neptune(props) {
                                     </p>
                                 </div>
                             </div>
-                            <div className="bg-opacity-20 hover:bg-opacity-40 ease duration-200 max-w-sm bg-white  border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-auto">
-                                <a href="#">
+                            <div className="bg-opacity-20 h-full hover:bg-opacity-40 ease duration-200 max-w-sm bg-white  border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-auto">
+                                <a
+                                    target="_blank"
+                                    href="https://hubblesite.org/contents/media/images/2005/22/1735-Image.html?news=true"
+                                >
                                     <img
                                         className="rounded-t-lg"
                                         src="https://www.indy100.com/media-library/what-if-you-fell-into-neptune.jpg?id=29717791"
@@ -116,7 +125,10 @@ function Neptune(props) {
                                     />
                                 </a>
                                 <div className="p-5">
-                                    <a href="#">
+                                    <a
+                                        target="_blank"
+                                        href="https://hubblesite.org/contents/media/images/2005/22/1735-Image.html?news=true"
+                                    >
                                         <h5 className="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">
                                             Neptune’s dynamic atmosphere
                                         </h5>
@@ -128,8 +140,12 @@ function Neptune(props) {
                                     </p>
                                 </div>
                             </div>
-                            <div className="bg-opacity-20 hover:bg-opacity-30 ease duration-200 max-w-sm bg-white  border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-auto">
-                                <a href="#">
+                            <div className="bg-opacity-20 h-full hover:bg-opacity-30 ease duration-200 max-w-sm bg-white  border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-auto">
+                                <a
+                                    target="_blank"
+                                    href="https://solarsystem.nasa.gov/moons/neptune-moons/triton/in-depth/
+"
+                                >
                                     <img
                                         className="rounded-t-lg"
                                         src="https://i.ytimg.com/vi/qGy4uyHVUYA/maxresdefault.jpg"
@@ -137,7 +153,11 @@ function Neptune(props) {
                                     />
                                 </a>
                                 <div className="p-5">
-                                    <a href="#">
+                                    <a
+                                        target="_blank"
+                                        href=" https://solarsystem.nasa.gov/moons/neptune-moons/triton/in-depth/
+"
+                                    >
                                         <h5 className="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">
                                             Triton’s Geology
                                         </h5>

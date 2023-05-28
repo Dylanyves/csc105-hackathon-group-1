@@ -55,7 +55,11 @@ function Ocean(props) {
             </ul>
 
             {/* Carousel */}
-            <div className="mt-32 max-w-5xl m-auto px-8">
+            <div
+                data-aos="zoom-in"
+                data-aos-duration="1000"
+                className="mt-32 max-w-5xl m-auto px-8"
+            >
                 <h3 className="text-white text-xl md:text-2xl mb-24 text-center">
                     Endagered Sea Creatures
                 </h3>
@@ -168,7 +172,11 @@ function Ocean(props) {
             </div>
 
             {/* Ocean issues */}
-            <div className="max-w-6xl m-auto mt-32 px-8 z-10">
+            <div
+                data-aos="flip-right"
+                data-aos-duration="1500"
+                className="max-w-6xl m-auto mt-32 px-8 z-10"
+            >
                 <h3 className="text-white text-2xl text-center mb-20">
                     Ocean Issues
                 </h3>
