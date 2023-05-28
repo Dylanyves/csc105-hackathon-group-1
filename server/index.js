@@ -31,6 +31,7 @@ app.use(cookieParser());
 app.use(bodyParser.json({ type: "application/json" }));
 
 // Routes
+app.get("/me", require("./routes/endpoint_me"));
 app.post("/signup", require("./routes/endpoint_signup"));
 app.post("/login", require("./routes/endpoint_login"));
 app.delete("/delete", require("./routes/endpoint_delete"));
