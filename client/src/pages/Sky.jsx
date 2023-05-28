@@ -41,94 +41,94 @@ function Sky(props) {
 
             {/* Gallery */}
             <div className="mt-48 max-w-4xl m-auto">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 items-center justify-center">
-                    <div class="grid gap-4">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 items-center justify-center">
+                    <div className="grid gap-4">
                         <div>
                             <img
-                                class="h-auto max-w-full rounded-lg m-auto"
+                                className="h-auto max-w-full rounded-lg m-auto"
                                 src={Sky1}
                                 alt=""
                             />
                         </div>
                         <div>
                             <img
-                                class="h-auto max-w-full rounded-lg m-auto"
+                                className="h-auto max-w-full rounded-lg m-auto"
                                 src={Sky2}
                                 alt=""
                             />
                         </div>
                         <div>
                             <img
-                                class="h-auto max-w-full rounded-lg m-auto"
+                                className="h-auto max-w-full rounded-lg m-auto"
                                 src={Sky3}
                                 alt=""
                             />
                         </div>
                     </div>
-                    <div class="grid gap-4">
+                    <div className="grid gap-4">
                         <div>
                             <img
-                                class="h-auto max-w-full rounded-lg m-auto"
+                                className="h-auto max-w-full rounded-lg m-auto"
                                 src={Sky4}
                                 alt=""
                             />
                         </div>
                         <div>
                             <img
-                                class="h-auto max-w-full rounded-lg m-auto"
+                                className="h-auto max-w-full rounded-lg m-auto"
                                 src={Sky5}
                                 alt=""
                             />
                         </div>
                         <div>
                             <img
-                                class="h-auto max-w-full rounded-lg m-auto"
+                                className="h-auto max-w-full rounded-lg m-auto"
                                 src={Sky6}
                                 alt=""
                             />
                         </div>
                     </div>
-                    <div class="grid gap-4">
+                    <div className="grid gap-4">
                         <div>
                             <img
-                                class="h-auto max-w-full rounded-lg m-auto"
+                                className="h-auto max-w-full rounded-lg m-auto"
                                 src={Sky7}
                                 alt=""
                             />
                         </div>
                         <div>
                             <img
-                                class="h-auto max-w-full rounded-lg m-auto"
+                                className="h-auto max-w-full rounded-lg m-auto"
                                 src={Sky8}
                                 alt=""
                             />
                         </div>
                         <div>
                             <img
-                                class="h-auto max-w-full rounded-lg m-auto"
+                                className="h-auto max-w-full rounded-lg m-auto"
                                 src={Sky9}
                                 alt=""
                             />
                         </div>
                     </div>
-                    <div class="grid gap-4">
+                    <div className="grid gap-4">
                         <div>
                             <img
-                                class="h-auto max-w-full rounded-lg m-auto"
+                                className="h-auto max-w-full rounded-lg m-auto"
                                 src={Sky10}
                                 alt=""
                             />
                         </div>
                         <div>
                             <img
-                                class="h-auto max-w-full rounded-lg m-auto"
+                                className="h-auto max-w-full rounded-lg m-auto"
                                 src={Sky11}
                                 alt=""
                             />
                         </div>
                         <div>
                             <img
-                                class="h-auto max-w-full rounded-lg m-auto"
+                                className="h-auto max-w-full rounded-lg m-auto"
                                 src={Sky12}
                                 alt=""
                             />
@@ -150,7 +150,7 @@ function Sky(props) {
                     <h2 id="accordion-collapse-heading-1">
                         <button
                             type="button"
-                            class="bg-white text-white bg-opacity-20 flex items-center justify-between w-full p-5 font-medium text-left order border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-graay-400 dark:hover:bg-gray-800"
+                            className="bg-white text-white bg-opacity-20 flex items-center justify-between w-full p-5 font-medium text-left order border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-graay-400 dark:hover:bg-gray-800"
                             data-accordion-target="#accordion-collapse-body-1"
                             aria-expanded="true"
                             aria-controls="accordion-collapse-body-1"
@@ -160,26 +160,26 @@ function Sky(props) {
                             </span>
                             <svg
                                 data-accordion-icon
-                                class="w-6 h-6 rotate-180 shrink-0"
+                                className="w-6 h-6 rotate-180 shrink-0"
                                 fill="currentColor"
                                 viewBox="0 0 20 20"
                                 xmlns="http://www.w3.org/2000/svg"
                             >
                                 <path
-                                    fill-rule="evenodd"
+                                    fillRule="evenodd"
                                     d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                    clip-rule="evenodd"
+                                    clipRule="evenodd"
                                 ></path>
                             </svg>
                         </button>
                     </h2>
                     <div
                         id="accordion-collapse-body-1"
-                        class="hidden"
+                        className="hidden"
                         aria-labelledby="accordion-collapse-heading-1"
                     >
-                        <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                            <p class="mb-2 text-white dark:text-gray-400">
+                        <div className="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
+                            <p className="mb-2 text-white dark:text-gray-400">
                                 The sky appears blue during the day due to a
                                 phenomenon called Rayleigh scattering, where
                                 molecules in the Earth's atmosphere scatter
@@ -192,7 +192,7 @@ function Sky(props) {
                     <h2 id="accordion-collapse-heading-2">
                         <button
                             type="button"
-                            class="bg-white bg-opacity-20 flex items-center justify-between w-full p-5 font-medium text-left text-white order border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:tebg-gray-100 dark:hover:bg-gray-800"
+                            className="bg-white bg-opacity-20 flex items-center justify-between w-full p-5 font-medium text-left text-white order border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:tebg-gray-100 dark:hover:bg-gray-800"
                             data-accordion-target="#accordion-collapse-body-2"
                             aria-expanded="false"
                             aria-controls="accordion-collapse-body-2"
@@ -202,26 +202,26 @@ function Sky(props) {
                             </span>
                             <svg
                                 data-accordion-icon
-                                class="w-6 h-6 shrink-0"
+                                className="w-6 h-6 shrink-0"
                                 fill="currentColor"
                                 viewBox="0 0 20 20"
                                 xmlns="http://www.w3.org/2000/svg"
                             >
                                 <path
-                                    fill-rule="evenodd"
+                                    fillRule="evenodd"
                                     d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                    clip-rule="evenodd"
+                                    clipRule="evenodd"
                                 ></path>
                             </svg>
                         </button>
                     </h2>
                     <div
                         id="accordion-collapse-body-2"
-                        class="hidden"
+                        className="hidden"
                         aria-labelledby="accordion-collapse-heading-2"
                     >
-                        <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
-                            <p class="mb-2 text-white dark:text-gray-400">
+                        <div className="p-5 border border-b-0 border-gray-200 dark:border-gray-700">
+                            <p className="mb-2 text-white dark:text-gray-400">
                                 The highest clouds in the Earth's atmosphere,
                                 called noctilucent clouds, form at extremely
                                 high altitudes near the poles during the summer
@@ -234,7 +234,7 @@ function Sky(props) {
                     <h2 id="accordion-collapse-heading-3">
                         <button
                             type="button"
-                            class="bg-white bg-opacity-20 flex items-center justify-between w-full p-5 font-medium text-left text-white order border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-800"
+                            className="bg-white bg-opacity-20 flex items-center justify-between w-full p-5 font-medium text-left text-white order border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-800"
                             data-accordion-target="#accordion-collapse-body-3"
                             aria-expanded="false"
                             aria-controls="accordion-collapse-body-3"
@@ -244,26 +244,26 @@ function Sky(props) {
                             </span>
                             <svg
                                 data-accordion-icon
-                                class="w-6 h-6 shrink-0"
+                                className="w-6 h-6 shrink-0"
                                 fill="currentColor"
                                 viewBox="0 0 20 20"
                                 xmlns="http://www.w3.org/2000/svg"
                             >
                                 <path
-                                    fill-rule="evenodd"
+                                    fillRule="evenodd"
                                     d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                    clip-rule="evenodd"
+                                    clipRule="evenodd"
                                 ></path>
                             </svg>
                         </button>
                     </h2>
                     <div
                         id="accordion-collapse-body-3"
-                        class="hidden"
+                        className="hidden"
                         aria-labelledby="accordion-collapse-heading-3"
                     >
-                        <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
-                            <p class="mb-2 text-white dark:text-gray-400">
+                        <div className="p-5 border border-t-0 border-gray-200 dark:border-gray-700">
+                            <p className="mb-2 text-white dark:text-gray-400">
                                 The sky is not completely dark even at night.
                                 Even in the absence of the Moon and light
                                 pollution, the night sky still exhibits a faint
@@ -272,7 +272,7 @@ function Sky(props) {
                                 upper atmosphere.
                             </p>
 
-                            <p class="mb-2 text-white dark:text-gray-400">
+                            <p className="mb-2 text-white dark:text-gray-400">
                                 Learn more about these technologies:
                             </p>
                         </div>

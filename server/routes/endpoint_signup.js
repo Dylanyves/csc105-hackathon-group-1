@@ -17,8 +17,10 @@ module.exports = async (req, res) => {
 
     connection.query(getQuery, (err, rows) => {
         if (err) {
+            console.log(err);
             res.json({ success: false, message: err.message });
         } else {
+            console.log("object");
             if (rows.length === 0) {
                 const postQuery = mysql.format(
                     "INSERT INTO Users (userName, userPassword, userId) VALUES (?, ?, ?)",
