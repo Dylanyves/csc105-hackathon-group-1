@@ -10,7 +10,7 @@ import Turtle from "../assets/images/ocean/turtle.png";
 function Ocean(props) {
     return (
         <div className="mt-80 relative">
-            <div className="">
+            <div data-aos="flip-right" data-aos-duration="1000" className="">
                 <h2 className="text-white relative text-center mb-32 font-semibold text-6xl sm:text-[6rem] ease duration-200">
                     OCEAN
                 </h2>

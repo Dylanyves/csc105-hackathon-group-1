@@ -26,7 +26,11 @@ function Sky(props) {
                     <img className="w-full" src={Cloud} alt="" />
                 </div>
 
-                <div className="m-auto max-w-4xl font-medium text-white text-2xl md:text-3xl xl:text-4xl italic">
+                <div
+                    data-aos="zoom-in"
+                    data-aos-duration="1000"
+                    className="m-auto max-w-4xl font-medium text-white text-2xl md:text-3xl xl:text-4xl italic"
+                >
                     <q className="">
                         Beneath the <span className="text-[#DBCC49]">sky</span>,
                         we are but small beings, humbled by the vastness and
@@ -134,7 +138,11 @@ function Sky(props) {
             </div>
 
             {/* Accordion */}
-            <div className="max-w-2xl m-auto mt-32">
+            <div
+                data-aos="zoom-in"
+                data-aos-duration="1000"
+                className="max-w-2xl m-auto mt-32"
+            >
                 <h3 className="text-white mb-8 text-2xl">
                     Something you might not know
                 </h3>

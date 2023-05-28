@@ -1,8 +1,7 @@
 import React, { useState, useRef } from "react";
-
 import { Link } from "react-router-dom";
 
-function Login(props) {
+function Login({ login, setLogin, signup, setSignup }) {
     const username = useRef();
     const password = useRef();
     const [remember, setRemember] = useState(false);
@@ -20,12 +19,17 @@ function Login(props) {
         }
     };
 
+    const toggle = () => {
+        setLogin(false);
+        setSignup(true);
+    };
+
     return (
-        <div>
+        <div className="">
             <div className="h-screen flex items-center justify-center">
-                <div className="p-8 bg-gray-100 w-[400px] bg-[#22223B] rounded-2xl">
-                    <h1 className="text-center text-xl mb-10 text-gray-50">
-                        Welcome
+                <div className="p-8 bg-gray-100 w-[400px]  rounded-2xl">
+                    <h1 className="text-center text-xl mb-10 text-black">
+                        Login
                     </h1>
                     <form onSubmit={submitHandle} className="mb-10">
                         <div className="mb-6 text-gray-50">
@@ -67,14 +71,14 @@ function Login(props) {
                         </button>
                     </form>
                     <div className="text-center">
-                        <p className="text-sm text-gray-50">
-                            Don't have an account?{" "}
-                            <Link
-                                className="text-[#496DDB] underline text-sm tracking-wide text-gray-50"
-                                to="/signup"
+                        <p className="text-sm text-black">
+                            Don't have an account?
+                            <span
+                                onClick={toggle}
+                                className="mx-2 text-[#496DDB] cursor-pointer"
                             >
-                                Sign up
-                            </Link>
+                                Signup
+                            </span>
                         </p>
                     </div>
                 </div>
